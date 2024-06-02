@@ -32,3 +32,6 @@
 .post h1 a, .post h1 a:visited {
     color: #000000;
 }
+.blog-image-list{
+    object-fit: cover;
+}
