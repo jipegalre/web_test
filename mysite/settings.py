@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-v(l+u5l=4$q+ozww8bu72j_fj%p$pgj*psc#$b192zc!tcz$t0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','pinkanimal.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1','10.0.2.2','pinkanimal.pythonanywhere.com']
 
 
 # Application definition
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework.authtoken',
     'blog',
 ]
 
@@ -128,3 +130,12 @@ MEDIA_ROOT = BASE_DIR / "media/"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES' : [
+        # 'rest_framework.permissions.IsAdminUser’,
+    ],
+    'PAGE_SIZE' : 10,
+
+    
+}
